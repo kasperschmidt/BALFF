@@ -10,12 +10,9 @@ If you find this code useful please cite
 - Mason et al. (2015), ApJ, 805:79, http://adsabs.harvard.edu/abs/2015ApJ...805...79M
 
 ## Table of Content
-====================
-
 
 - [Description](#description)
 - [Script Overview](#script-overview)
-- [Installation](#installation)
 - [Dependencies and Requirements](#dependencies-and-requirements)
   - [Standard Packages](#standard-packages)
   - [Special Packages](#special-packages)
@@ -23,12 +20,12 @@ If you find this code useful please cite
   - [Default Run](#default-run)
   - [Accounting for Magnification Bias](#accounting-for-magnification-bias)
 - [Main Keywords in BALFF](#main-keywords-in-balff)
-  - [`balff_run.py`](#balff_run.pty)
-  - [`balff_mpd.py`](#balff_mpd.pty)
+  - [balff_run.py](#balff_run.py)
+  - [balff_mpd.py](#balff_mpd.py)
 - [References](#references)
 
 ## Description
-====================
+
 The Bayesian Algorithm for Luminosity Function Fitting (BALFF) presented in [Schmidt et al. (2014)](http://adsabs.harvard.edu/abs/2014ApJ...786...57S) is an algorithm that fits the (UV) luminosity function to a sample of galaxies (e.g., photometrically selected Lyman Break Galaxies, LBGs) selected from a set of observations.
 BALFF uses the Schechter Function shown to be a good approximation for the underlying distribution at low and high redshift, as its luminosity function model.
 The Bayesian formalism which BALFF is build on, avoids binning (and thus smearing) of object samples, includes a likelihood based on the formally correct binomial distribution as opposed to the often-used approximate Poisson distribution, and models the photometric uncertainties of each object in the sample directly, making full use of the full information providing more rigorous results.
@@ -41,7 +38,6 @@ Note that in the current BALFF framework the p(z) prior on the redshift of the i
 For detailed information on the Bayesian framework and the formal derivation and description of the terms in the Bayesian expressions, please refer to [Schmidt et al. (2014)](http://adsabs.harvard.edu/abs/2014ApJ...786...57S) and [Mason et al. (2015)](http://adsabs.harvard.edu/abs/2015ApJ...805...79M).
 
 ## Script Overview
-====================
 
 The following gives and overview of the scripts provided with the BALFF code
 
@@ -71,7 +67,6 @@ The following gives and overview of the scripts provided with the BALFF code
   - Various utilities used in the BALFF code.
 
 ## Dependencies and Requirements
-====================
 
 The code is written in python and uses a wide range of default packages included in standard installations of python. A few special packages as outlined below, needs to be installed on top of that to get BALFF running.
 
@@ -106,7 +101,6 @@ The following standard packages are imported in on or more of the BALFF scripts:
 
 
 ## Running BALFF
-====================
 
 In this section the default run of BALFF ([Schmidt et al. 2014](http://adsabs.harvard.edu/abs/2014ApJ...786...57S)) and a run of BALFF accounting for the magnification bias of sources ([Mason et al. 2015](http://adsabs.harvard.edu/abs/2015ApJ...805...79M)) are described. 
 
@@ -211,12 +205,10 @@ Here `fieldareaX_strong` is the area of the cut-out around objX1. And then meanX
 For more details please refer to [Mason et al. (2015)](http://adsabs.harvard.edu/abs/2015ApJ...805...79M).
 
 ## Main Keywords in BALFF 
-====================
 
 Below a few of the main keywords available in `balff_run.py` and `balff_mpd.py` are described. For more details on the individual routines and scripts, please refer to the headers of these and their subroutines.
 
-
-### `balff_mpd.py`
+### balff_mpd.py
 
 ```
 datafitstable     : Binary Fits table containing the data used to calculate the mpd
@@ -253,7 +245,7 @@ LFredshift        : The redshift at which the luminosity function is determined.
                     selection function integrations.
 ```
 
-### `balff_run.py`
+### balff_run.py
 
 ```
 --contamfrac     : Contamination fraction to apply to sample in datafile. Default value is 0.42
