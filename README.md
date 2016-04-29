@@ -20,8 +20,6 @@ If you find this code useful please cite
   - [Default Run](#default-run)
   - [Accounting for Magnification Bias](#accounting-for-magnification-bias)
 - [Main Keywords in BALFF](#main-keywords-in-balff)
-  - [balff_run.py](#balff_run.py)
-  - [balff_mpd.py](#balff_mpd.py)
 - [References](#references)
 
 ## Description
@@ -280,4 +278,6 @@ LFredshift        : The redshift at which the luminosity function is determined.
 
 - Schmidt et al. (2014), ApJ, 786:57, http://adsabs.harvard.edu/abs/2014ApJ...786...57S
 - Mason et al. (2015), ApJ, 805:79, http://adsabs.harvard.edu/abs/2015ApJ...805...79M
+- pymc_steps: https://github.com/brandonckelly/pymc_steps
+- Pangloss: https://github.com/drphilmarshall/Pangloss
 
