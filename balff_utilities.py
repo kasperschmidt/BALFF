@@ -100,7 +100,9 @@ def magapp2abs(Mapp,zobj,RA,DEC,Av=-99,band='Jbradley2012',cos='WMAP7BAOH0',verb
                                                      # correction of about ~0.1 mag or so.
         if isinstance(Mapp,types.FloatType) and Av == -99: # if Av is -99, calculate it
             Av, Ebv = butil.getAv(RA,DEC,band)
-        Mabs          = Mapp - 5*np.log10(Dlum)+5 + Kcorrection - Av # corrected absolut magnitude of objects
+            Mabs    = Mapp - 5*np.log10(Dlum)+5 + Kcorrection - Av # corrected absolut magnitude of objects\
+        else:
+            Mabs    = None
     return Mabs
 #-------------------------------------------------------------------------------------------------------------
 def magabs2app(Mabs,zobj,RA,DEC,Av=-99,band=None,cos='WMAP7BAOH0'):
@@ -134,7 +136,9 @@ def magabs2app(Mabs,zobj,RA,DEC,Av=-99,band=None,cos='WMAP7BAOH0'):
                                                      # correction of about ~0.1 mag or so.
         if isinstance(Mabs,types.FloatType) and Av == -99: # if Av is -99, calculate it
             Av, Ebv = getAv(RA,DEC,band)
-        Mapp          = Mabs + 5*np.log10(Dlum) - 5 - Kcorrection + Av # corrected absolut magnitude of objects
+            Mapp    = Mabs + 5*np.log10(Dlum) - 5 - Kcorrection + Av # corrected absolut magnitude of objects
+        else:
+            Mapp    = None
     return Mapp
 #-------------------------------------------------------------------------------------------------------------
 def Mabs2L(Mabs,MUVsun=5.5):
